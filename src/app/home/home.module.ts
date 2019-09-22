@@ -6,13 +6,17 @@ import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { QuoteService } from './quote.service';
-import { StorageComponent } from '@app/pages/storage/storage.component';
-import { StorageModule } from '@app/pages/storage/storage.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { StorageNotificationsComponent } from '@app/notifications/storage-notifications/storage-notifications.component';
+import { PhysicalNotificationsComponent } from '@app/notifications/physical-notifications/physical-notifications.component';
+import { NetworkNotificationsComponent } from '@app/notifications/network-notifications/network-notifications.component';
 @NgModule({
   imports: [CommonModule, TranslateModule, CoreModule, SharedModule, HomeRoutingModule, FontAwesomeModule],
-  declarations: [HomeComponent, StorageComponent]
+  declarations: [
+    HomeComponent,
+    StorageNotificationsComponent,
+    PhysicalNotificationsComponent,
+    NetworkNotificationsComponent
+  ]
 })
 export class HomeModule {}

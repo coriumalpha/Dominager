@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { StorageModule } from './pages/storage/storage.module';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
     SharedModule,
     ShellModule,
     HomeModule,
+    StorageModule,
     LoginModule,
     FontAwesomeModule,
     AppRoutingModule // must be imported as the last module as it contains the fallback route
