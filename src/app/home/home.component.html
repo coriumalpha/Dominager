@@ -8,3 +8,33 @@
     <q [hidden]="isLoading">{{ quote }}</q>
   </div>
 </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h5><fa-icon icon="ethernet"></fa-icon> Redes</h5>
+        </div>
+        <div class="card-body"></div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h5><fa-icon icon="network-wired"></fa-icon> Hardware</h5>
+        </div>
+        <div class="card-body"></div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h5><fa-icon icon="server"></fa-icon> Datos</h5>
+        </div>
+        <div class="card-body">
+          <app-storage></app-storage>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
