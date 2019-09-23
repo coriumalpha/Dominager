@@ -1,5 +1,5 @@
-import { CustomNotification } from '@app/notifications/custom-notification';
-import { BadgeType } from '@app/notifications/badge-type.enum';
+import { CustomNotification } from '@app/shared/models/custom-notification/custom-notification';
+import { BadgeType } from '@app/shared/enums/badge-type.enum';
 
 export const STORAGE_NOTIFICATIONS: CustomNotification[] = [
   {

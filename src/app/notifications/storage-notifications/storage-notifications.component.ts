@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomNotification } from '../custom-notification';
+import { CustomNotification } from '../../shared/models/custom-notification/custom-notification';
 import { Observable } from 'rxjs';
 import { StorageService } from '@app/services/storage/storage.service';
 

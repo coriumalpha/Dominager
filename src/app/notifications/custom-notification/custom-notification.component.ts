@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CustomNotification } from '../custom-notification';
-import { BadgeType } from '../badge-type.enum';
+import { CustomNotification } from '../../shared/models/custom-notification/custom-notification';
+import { BadgeType } from '../../shared/enums/badge-type.enum';
 
 @Component({
   selector: 'app-custom-notification',

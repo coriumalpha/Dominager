@@ -15,5 +15,7 @@
   "Version": "Versión",
   "Storage": "Almacenamiento",
   "Networks": "Redes",
-  "Hardware": "Hardware"
+  "Hardware": "Hardware",
+  "Drives": "Unidades",
+  "Datasets": "Datasets"
 }

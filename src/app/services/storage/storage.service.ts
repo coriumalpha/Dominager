@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CustomNotification } from '@app/notifications/custom-notification';
+import { CustomNotification } from '@app/shared/models/custom-notification/custom-notification';
 import { Observable, of } from 'rxjs';
 import { STORAGE_NOTIFICATIONS } from './mock-notifications';
 

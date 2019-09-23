@@ -1,5 +1,5 @@
-import { Operation } from '@app/models/storage/operation';
-import { BadgeType } from './badge-type.enum';
+import { Operation } from '@app/shared/models/storage/operation';
+import { BadgeType } from '../../enums/badge-type.enum';
 
 export class CustomNotification {
   public id: number;

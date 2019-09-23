@@ -3,15 +3,29 @@
     <div class="col">
       <div class="card">
         <div class="card-header">
-          <h5><fa-icon icon="hdd"></fa-icon> Drives</h5>
+          <h5><fa-icon class="mr-2" icon="hdd"></fa-icon><span translate>Drives</span></h5>
         </div>
-        <div class="card-body"></div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li *ngFor="let drive of drives | async; index as i" class="list-group-item" [class.active]="i == 2">
+              <div class="d-flex w-100 justify-content-between">
+                <div class="d-flex w-100 flex-column">
+                  <h5>{{ drive.name }}</h5>
+                  <small>{{ drive.modelName }}</small>
+                </div>
+                <small
+                  ><span class="badge badge-success badge-pill">{{ drive.capacity / 1000 }} TB</span></small
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
         <div class="card-header">
-          <h5><fa-icon icon="database"></fa-icon> Datasets</h5>
+          <h5><fa-icon class="mr-2" icon="database"></fa-icon><span translate>Datasets</span></h5>
         </div>
         <div class="card-body"></div>
       </div>
