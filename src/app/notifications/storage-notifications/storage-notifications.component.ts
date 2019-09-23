@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomNotification } from '../custom-notification';
+import { Observable } from 'rxjs';
+import { StorageService } from '@app/services/storage/storage.service';
 
 @Component({
   selector: 'app-storage-notifications',
@@ -7,9 +9,20 @@ import { CustomNotification } from '../custom-notification';
   styleUrls: ['./storage-notifications.component.scss']
 })
 export class StorageNotificationsComponent implements OnInit {
-  public not1: CustomNotification = Object.assign(new CustomNotification(), { name: 'Test', badge: 5 });
+  public notifications: Observable<CustomNotification[]>;
 
-  constructor() {}
+  constructor(private storage: StorageService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.setupNotifications();
+    this.retrieveNotifications();
+  }
+
+  private setupNotifications(): void {
+    this.notifications = this.storage.getNotifications();
+  }
+
+  private retrieveNotifications(): void {
+    this.notifications.subscribe();
+  }
 }

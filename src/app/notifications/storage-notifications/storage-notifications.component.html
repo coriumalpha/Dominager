@@ -1,1 +1,3 @@
-<app-custom-notification [notification]="not1"></app-custom-notification>
+<div *ngFor="let notification of notifications | async; index as i">
+  <app-custom-notification [notification]="notification" [first]="i === 0"></app-custom-notification>
+</div>
