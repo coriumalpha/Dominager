@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 
 import { Logger } from './logger.service';
 import enUS from '../../translations/en-US.json';
-import frFR from '../../translations/fr-FR.json';
+import esES from '../../translations/es-ES.json';
 
 const log = new Logger('I18nService');
 const languageKey = 'language';
@@ -30,8 +30,8 @@ export class I18nService {
 
   constructor(private translateService: TranslateService) {
     // Embed languages to avoid extra HTTP requests
+    translateService.setTranslation('es-ES', esES);
     translateService.setTranslation('en-US', enUS);
-    translateService.setTranslation('fr-FR', frFR);
   }
 
   /**

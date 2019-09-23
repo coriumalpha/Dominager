@@ -1,0 +1,19 @@
+{
+  "APP_NAME": "Dominager",
+  "About": "Acerca de",
+  "Hello world !": "¡Hola mundo!",
+  "Home": "Inicio",
+  "Logged in as": "Conectado como",
+  "Login": "Login",
+  "Logout": "Logout",
+  "Password": "Contraseña",
+  "Password is required": "Se requiere de contraseña",
+  "Username": "Usuario",
+  "Username is required": "Se requiere de usuario",
+  "Username or password incorrect.": "Usuario o contraseña incorrectos",
+  "Remember me": "Mantener sesión iniciada",
+  "Version": "Versión",
+  "Storage": "Almacenamiento",
+  "Networks": "Redes",
+  "Hardware": "Hardware"
+}
