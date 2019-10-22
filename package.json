@@ -19,6 +19,7 @@
     "generate": "ng generate"
   },
   "dependencies": {
+    "@angular-redux/store": "^9.0.0",
     "@angular/common": "^8.1.0",
     "@angular/compiler": "^8.1.0",
     "@angular/core": "^8.1.0",
@@ -32,11 +33,16 @@
     "@ng-bootstrap/ng-bootstrap": "^5.0.0-rc.1",
     "@ngx-translate/core": "^11.0.1",
     "bootstrap": "^4.1.1",
+    "redux": "^4.0.4",
+    "redux-logger": "^3.0.6",
+    "redux-observable": "^1.2.0",
     "rxjs": "^6.5.2",
     "zone.js": "^0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.801.0",
+    "@angular-redux/form": "^10.0.0",
+    "@angular-redux/router": "^10.0.0",
     "@angular/cli": "~8.1.0",
     "@angular/compiler-cli": "^8.1.0",
     "@angular/language-service": "^8.1.0",
@@ -46,6 +52,7 @@
     "@types/jasmine": "^3.3.13",
     "@types/jasminewd2": "^2.0.3",
     "@types/node": "^10.9.0",
+    "@types/redux-logger": "^3.0.7",
     "codelyzer": "^5.1.0",
     "hads": "^1.7.0",
     "htmlhint": "^0.11.0",
