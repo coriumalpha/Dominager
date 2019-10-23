@@ -5,23 +5,23 @@ import { combineEpics, createEpicMiddleware } from 'redux-observable';
 import { createLogger } from 'redux-logger';
 import { rootReducer } from './reducers';
 import { environment } from '@env/environment';
+import { DriveEpics } from '@app/pages/storage-state-management/epics';
 
 const epicMiddleware = createEpicMiddleware();
 
 const initialState: AppState = {
-  login: {
-    credentials: {}
+  drives: {
+    items: []
   }
 };
 
 @NgModule({
   imports: [NgReduxModule],
-  providers: []
+  providers: [DriveEpics]
 })
 export class StoreModule {
-  constructor(private store: NgRedux<AppState>) {
-    const rootEpic = combineEpics();
-    //...this.todoEpics.getEpics()
+  constructor(private store: NgRedux<AppState>, private driveEpics: DriveEpics) {
+    const rootEpic = combineEpics(...this.driveEpics.getEpics());
     const middelwares = [epicMiddleware];
     const devMiddelwares = [...middelwares, createLogger()];
     const prodMiddelwares = [...middelwares];

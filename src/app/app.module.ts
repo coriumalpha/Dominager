@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { StorageModule } from './pages/storage/storage.module';
+import { StoreModule } from './store/module';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { StorageModule } from './pages/storage/storage.module';
     StorageModule,
     LoginModule,
     FontAwesomeModule,
-    AppRoutingModule // must be imported as the last module as it contains the fallback route
+    AppRoutingModule, // must be imported as the last module as it contains the fallback route
+    StoreModule
   ],
   declarations: [AppComponent],
   providers: [],

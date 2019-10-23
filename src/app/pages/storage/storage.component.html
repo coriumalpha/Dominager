@@ -7,7 +7,7 @@
         </div>
         <div class="card-body">
           <ul class="list-group">
-            <li *ngFor="let drive of drives | async; index as i" class="list-group-item" [class.active]="i == 2">
+            <li *ngFor="let drive of drives; index as i" class="list-group-item" [class.active]="i == 2">
               <div class="d-flex w-100 justify-content-between">
                 <div class="d-flex w-100 flex-column">
                   <h5>{{ drive.name }}</h5>

@@ -1,5 +1,12 @@
 import { Drive, DriveStatus } from './models';
-import { DrivesActions, AddDriveAction, RemoveDriveAction, GetDrivesAction, ChangeDriveStatusAction } from './actions';
+import {
+  DrivesActions,
+  AddDriveAction,
+  RemoveDriveAction,
+  GetDrivesAction,
+  ChangeDriveStatusAction,
+  GetDrivesSucceededAction
+} from './actions';
 import storageConstants from './constants';
 
 export interface DriveListState {
@@ -7,7 +14,7 @@ export interface DriveListState {
   status?: DriveStatus;
 }
 
-export default function todoReducer(oldState: DriveListState = {} as any, action: DrivesActions): DriveListState {
+export default function driveReducer(oldState: DriveListState = {} as any, action: DrivesActions): DriveListState {
   switch (action.type) {
     case storageConstants.ADD_DRIVE: {
       const addAction = action as AddDriveAction;
@@ -34,7 +41,17 @@ export default function todoReducer(oldState: DriveListState = {} as any, action
     }
     case storageConstants.GET_DRIVES: {
       const getDrivesAction = action as GetDrivesAction;
-      const items: Drive[] = getDrivesAction.items;
+
+      const newState: DriveListState = {
+        ...oldState,
+        status: 'idle'
+      };
+
+      return newState;
+    }
+    case storageConstants.GET_DRIVES_SUCCEEDED: {
+      const getDriveSucceededAction = action as GetDrivesSucceededAction;
+      const items: Drive[] = getDriveSucceededAction.items;
 
       const newState: DriveListState = {
         ...oldState,

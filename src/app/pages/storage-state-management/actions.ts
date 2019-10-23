@@ -24,14 +24,33 @@ export function removeDrive(id: number): RemoveDriveAction {
   };
 }
 
-export interface GetDrivesAction extends Action {
+export interface GetDrivesAction extends Action {}
+
+export function getDrives(): GetDrivesAction {
+  return {
+    type: storageConstants.GET_DRIVES
+  };
+}
+
+export interface GetDrivesSucceededAction extends Action {
   items: Drive[];
 }
 
-export function getDrives(items: Drive[]): GetDrivesAction {
+export function getDrivesSucceeded(items: Drive[]): GetDrivesSucceededAction {
   return {
-    type: storageConstants.GET_DRIVES,
+    type: storageConstants.GET_DRIVES_SUCCEEDED,
     items
+  };
+}
+
+export interface GetDrivesFailedAction extends Action {
+  error: any;
+}
+
+export function getDrivesFailed(error: any): GetDrivesFailedAction {
+  return {
+    type: storageConstants.GET_DRIVES_FAILED,
+    error
   };
 }
 
